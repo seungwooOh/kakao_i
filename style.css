@@ -1,0 +1,34 @@
+* {
+    margin-top: 0;
+    font-family: 'Nunito', 'Noto Sans KR', sans-serif;
+    
+}
+
+header {
+    background: rgb(255, 255, 0);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin-left: 30px;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    color: gray;
+    border-top: 2px solid #494242;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
