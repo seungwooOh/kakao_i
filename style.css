@@ -14,30 +14,38 @@ li {
     list-style: none;
 }
 
+.inner {
+    padding: 30px;
+}
+
 .header {
-    padding: 10px 30px;
     position: sticky;
     top: 0%;
     background: #ffe100;
     color: #fff;
     font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: background .3s;
+}
+
+.header:hover {
+    background: #ffffff;
+    color: #000000;
 }
 
 .gnb_list li {
-    padding: 10px 30px;
+    padding: 10px 25px;
 }
-
-/* li {
-    display: inline;
-} */
 
 .gnb_list {
     display: flex;
 }
 
-.header > .inner {
+.header .inner {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .header .inner > a {
@@ -47,18 +55,59 @@ li {
 
 h1 {
     color: white;
+    padding-right: 20px;
 }
 
 main {
-    margin-left: 30px;
+
 }
 
-footer {
-    position: fixed;
-    text-align: center;
-    color: gray;
-    border-top: 2px solid #494242;
-    bottom: 0;
+.footer {
     width: 100%;
-    padding: 30px;
+    border-top: 1px solid #666;
+    font-size: 14px;
+}
+
+.footer .inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.btn_top {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;    /*마우스 커서 변화*/
+}
+
+.copyright {
+    display: block;
+    padding-top: 71px;
+}
+
+.policy_list li,
+.share_list li,
+.share_list {
+    display: inline-block;
+}
+
+.policy_list li {
+    margin-right: 30px;
+}
+
+.share_title {
+    color: #000000;
+}
+
+.wrap_share {
+    padding-top: 30px;
+}
+
+.ico_img {
+    width: 24px;
+    vertical-align: middle;
+    margin-left: 8px;
 }
