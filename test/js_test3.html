@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        img {
+            width: 100%;
+        }
+
+        .image_list {
+            display: flex;
+            position: relative;
+            left: 0;
+            transition: left 0.3s;
+        }
+
+        #main_visual {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main_visual">
+        <div class="image_list">
+            <img src="../asset/main01.jpg" alt="">
+            <img src="../asset/main02.jpg" alt="">
+            
+        </div>
+    </div>
+    <script>
+        const visual_area = document.getElementById('main_visual');
+        const image_list = document.querySelector('.image_list');
+
+        visual_area.onmousemove = function(e) {
+            if(e.offsetX > visual_area.offsetWidth / 2) {
+                image_list.style.cursor = `url('arrow_right.png') 0 0, auto`;
+            } else {
+                image_list.style.cursor = `url('arrow_left.png') 0 0, auto`;
+            }
+        }
+
+        visual_area.onclick = function(e) {
+            if(e.offsetX > visual_area.offsetWidth / 2) {
+                image_list.style.left = -visual_area.offsetWidth + 'px';
+            } else {
+                image_list.style.left = 0;
+            }
+        }
+
+    </script>
+</body>
+</html>

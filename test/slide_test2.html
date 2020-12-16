@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* box-sizing: border-box; */
+        }
+
+        #container {
+            overflow: hidden;
+        }
+
+        #slide_list {
+            display: flex;
+            position: relative;
+            /* left: -100%; */
+            /*js에서 변경하는 부분*/
+        }
+
+        .slide_item {
+            /* flex : 1 0 100vw; */
+            /* flex-grow: 1; */
+            flex-shrink: 0;
+            flex-basis: 100vw;
+
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <ul id="slide_list">
+            <li class="slide_item">
+                <strong>title</strong>
+                <img src="../asset/main01.jpg" alt="">
+            </li>
+            <li class="slide_item">
+                <strong>aaaa</strong>
+                <img src="../asset/main02.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <script>
+        const container_area = document.getElementById('container');
+        const slide_list = document.querySelector('#slide_list');
+
+        container_area.onmousemove = function (e) {
+            if (e.offsetX > container_area.offsetWidth / 2) {
+                slide_list.style.cursor = `url('../asset/arrow_right.png') 0 0, auto`;
+            } else {
+                slide_list.style.cursor = `url('../asset/arrow_left.png') 0 0, auto`;
+            }
+        }
+
+        container_area.onclick = function (e) {
+            if (e.offsetX > container_area.offsetWidth / 2) {
+                slide_list.style.left = '-100vw';
+            } else {
+                slide_list.style.left = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
