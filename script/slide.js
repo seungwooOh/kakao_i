@@ -10,7 +10,7 @@ main_img_area.onmousemove = function (e) {
 
     const res = e.offsetX < (main_img_area.offsetWidth / 2) ? 'left' : 'right';
 
-    slide_list.style.cursor = `url('../asset/arrow_${res}.png') 0 0, auto`;
+    slide_list.style.cursor = `url('./asset/arrow_${res}.png') 0 0, auto`;
 }
 
 main_img_area.onclick = function (e) {
